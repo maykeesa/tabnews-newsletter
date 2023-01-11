@@ -1,0 +1,46 @@
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.clients-quantity {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.email-input {
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+    outline: none;
+    padding: 4px;
+}
+
+.btn-subscribe {
+    border: none;
+    height: 2.5rem;
+    border-radius: 8px;
+    outline: none;
+    background-color: #1983FF;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-subscribe:hover {
+    background-color: #51a2ff;
+    cursor: pointer;
+}

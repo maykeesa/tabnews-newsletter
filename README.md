@@ -3,13 +3,6 @@
 
 <br>
 
-## 💻 Tecnologias
-
-* Java
-* Spring Boot
-* Spring Data
-* HTML e CSS
-
 <h2> 🎯 Objetivos: </h2>
 
 * Criação do Back-end

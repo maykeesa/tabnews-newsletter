@@ -1,18 +1,46 @@
 package br.com.email.tabnews.controller;
 
+import java.net.URI;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import br.com.email.tabnews.controller.dto.UserDto;
 import br.com.email.tabnews.controller.form.UserForm;
+import br.com.email.tabnews.model.User;
+import br.com.email.tabnews.repository.UserRepository;
 
-@RestController("/user")
+@RestController
+@RequestMapping("/user")
 public class UserController {
+	
+	@Autowired
+	private UserRepository userRep;
 
 	@PostMapping("/register")
-	public ResponseEntity<UserDto> cadastrar(@RequestBody UserForm form){
-		return ResponseEntity.ok().build();
+	public ResponseEntity<UserDto> cadastrar(@RequestBody @Valid UserForm form, UriComponentsBuilder uriBuilder){
+		User user = form.converter();
+		this.userRep.save(user);
+		
+		URI uri = uriBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri();
+		return ResponseEntity.created(uri).body(new UserDto(user));
 	}
+	
+	/*
+	@GetMapping("/hello-world")
+	public String hello(@RequestParam(required = false) String nome) {
+		if(nome == null) {
+			return "Hello World! :D";
+		}else {
+			return "Hello World | User |" + nome +"! :D";
+		}
+	}
+	*/
 }

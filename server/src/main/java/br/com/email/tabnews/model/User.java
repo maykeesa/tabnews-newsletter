@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "user_registered")
+@Table(name = "users")
 public class User {
 
 	@Id
@@ -18,5 +18,9 @@ public class User {
 	private Long id;
 	private String nome;
 	private String email;
-	private String numero;
+	
+	public User(String nome, String email) {
+		this.nome = nome;
+		this.email = email;
+	}
 }

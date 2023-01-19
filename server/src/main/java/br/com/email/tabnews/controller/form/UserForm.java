@@ -5,6 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import br.com.email.tabnews.model.User;
 import lombok.Data;
 
 @Data
@@ -14,7 +15,8 @@ public class UserForm {
 	private String nome;
 	@Email
 	private String email;
-	@NotBlank @NotEmpty
-	private String numero;
-
+	
+	public User converter() {
+		return new User(this.nome, this.email);
+	}
 }

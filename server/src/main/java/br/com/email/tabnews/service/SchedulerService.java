@@ -16,7 +16,6 @@ public class SchedulerService {
 	
 	public void dailyTask() {
 		TimerTask daily = new TimerTask() {
-
 			@Override
 			public void run() {
 				System.out.println("Task diária: 1");
@@ -26,24 +25,26 @@ public class SchedulerService {
 	}
 	
 	public void weeklyTask() {
+		long week = oneDay * 7;
+		
 		TimerTask weekly = new TimerTask() {
-
 			@Override
 			public void run() {
 				System.out.println("Task semanal: 7");
 			}
 		};
-		timer.schedule(weekly, 0, oneDay * 7);
+		timer.schedule(weekly, week, week);
 	}
 	
 	public void monthlyTask() {
+		long moth = oneDay * 30;
+		
 		TimerTask weekly = new TimerTask() {
-
 			@Override
 			public void run() {
 				System.out.println("Task mensal: 30");
 			}
 		};
-		timer.schedule(weekly, 0, oneDay * 30);
+		timer.schedule(weekly, moth, moth);
 	}
 }

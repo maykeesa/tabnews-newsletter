@@ -32,15 +32,4 @@ public class UserController {
 		URI uri = uriBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri();
 		return ResponseEntity.created(uri).body(new UserDto(user));
 	}
-	
-	/*
-	@GetMapping("/hello-world")
-	public String hello(@RequestParam(required = false) String nome) {
-		if(nome == null) {
-			return "Hello World! :D";
-		}else {
-			return "Hello World | User |" + nome +"! :D";
-		}
-	}
-	*/
 }

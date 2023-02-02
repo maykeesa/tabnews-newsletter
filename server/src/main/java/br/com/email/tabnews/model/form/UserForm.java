@@ -1,4 +1,4 @@
-package br.com.email.tabnews.controller.form;
+package br.com.email.tabnews.model.form;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

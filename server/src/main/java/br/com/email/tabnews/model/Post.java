@@ -22,9 +22,6 @@ public class Post {
 	private String ownerName;
 	private int tabCoins;
 	private LocalDateTime datePublished;
-
-	private String idPost;
-	private String slug;
 	private String title;
 	@Column(columnDefinition = "TEXT")
 	private String body;

@@ -1,4 +1,4 @@
-package br.com.email.tabnews.controller.dto;
+package br.com.email.tabnews.model.dto;
 
 import java.time.LocalDateTime;
 

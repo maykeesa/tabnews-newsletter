@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import br.com.email.tabnews.controller.dto.UserDto;
-import br.com.email.tabnews.controller.form.UserForm;
 import br.com.email.tabnews.model.User;
+import br.com.email.tabnews.model.dto.UserDto;
+import br.com.email.tabnews.model.form.UserForm;
 import br.com.email.tabnews.repository.UserRepository;
 
 @RestController

@@ -1,5 +1,7 @@
 package br.com.email.tabnews.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,9 +20,11 @@ public class User {
 	private Long id;
 	private String nome;
 	private String email;
+	private LocalDateTime dataCriacao;
 	
 	public User(String nome, String email) {
 		this.nome = nome;
 		this.email = email;
+		this.dataCriacao = LocalDateTime.now();
 	}
 }

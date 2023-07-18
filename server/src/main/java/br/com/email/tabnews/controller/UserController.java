@@ -17,8 +17,9 @@ import br.com.email.tabnews.model.dto.UserDto;
 import br.com.email.tabnews.model.form.UserForm;
 import br.com.email.tabnews.repository.UserRepository;
 
+
 @RestController
-@RequestMapping("/user")
+@RequestMapping("tabnews-newsletter/user")
 public class UserController {
 	
 	@Autowired

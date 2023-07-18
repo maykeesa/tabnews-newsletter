@@ -1,6 +1,7 @@
 package br.com.email.tabnews.model;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,12 +19,16 @@ public class Post {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String ownerName;
+	private UUID id;
+	private String donoNome;
 	private int tabCoins;
-	private LocalDateTime datePublished;
-	private String title;
+	private LocalDateTime dataPublicacao;
+	private String slug;
+	private String titulo;
 	@Column(columnDefinition = "TEXT")
 	private String body;
 
+	public Post(){
+
+	}
 }

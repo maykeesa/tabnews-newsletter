@@ -22,7 +22,6 @@ public class ConnectionApiService {
 		return Arrays.asList(restTemp.getForObject(url, AllStartPageRequest[].class));
 	}
 	
-	
 	public PostRequest getPost(String user, String slug) {
 		String url = "https://www.tabnews.com.br/api/v1/contents/"+ user +"/" + slug;
 		RestTemplate restTemp = new RestTemplateBuilder()
@@ -31,8 +30,6 @@ public class ConnectionApiService {
 		
 		return restTemp.getForObject(url, PostRequest.class);
 	}
-	
-	
 	
 	/*
 	 * - Pega Thumb do artigo

@@ -7,11 +7,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SchedulerService {
-	private final long oneDay = 86400000;
+	
+	private final long oneDay;
 	private Timer timer;
 	
 	public SchedulerService() {
 		this.timer = new Timer();
+		this.oneDay = 86400000;
 	}
 	
 	public void dailyTask() {
@@ -37,7 +39,7 @@ public class SchedulerService {
 	}
 	
 	public void monthlyTask() {
-		long moth = oneDay * 30;
+		long month = oneDay * 30;
 		
 		TimerTask weekly = new TimerTask() {
 			@Override
@@ -45,6 +47,6 @@ public class SchedulerService {
 				System.out.println("Task mensal: 30");
 			}
 		};
-		timer.schedule(weekly, moth, moth);
+		timer.schedule(weekly, month, month);
 	}
 }

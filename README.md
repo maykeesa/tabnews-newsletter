@@ -1,14 +1,7 @@
-# TabNews Email - ✉️
-* É um website que será possível cadastrar o seu email e receber emails (diariamente, semanalmente ou mensalmente) dos tópicos mais relevantes da plataforma TabNews, do nosso querido Filipe Deschamps, como funciona o newsletter do próprio, dessa forma, você irá receber emails com informações e conteúdos de altíssima qualidade criados pela "turma" 😁
+# TabNewsletter - ✉️
+* É um website que será possível cadastrar o seu email e receber emails dos tópicos mais relevantes da plataforma TabNews, do nosso grandessíssimo Filipe Deschamps, assim como funciona o newsletter do mesmo, dessa forma, você irá receber emails com informações e conteúdos de altíssima qualidade criados pela "turma" 😁.
 
 <br>
-
-<h2> 🎯 Objetivos: </h2>
-
-* Criação do Back-end
-* Criação do Front-end
-* Cadastrar um domínio
-* Colocar webiste no ar
 
 ## 🤝 Colaboradores
 
